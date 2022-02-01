@@ -101,7 +101,6 @@ class Music(commands.Cog):
 
         if payload.user_id != self.client.user.id and payload.message_id == self._MESSAGE.id:
             ctx = await self.client.get_context(self._MESSAGE)
-    
             if str(payload.emoji) == pause_resume_emo:
                 if ctx.voice_client.is_playing():
                     ctx.voice_client.pause()
